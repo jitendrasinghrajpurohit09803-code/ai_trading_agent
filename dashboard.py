@@ -41,7 +41,7 @@ if not data.empty:
     data['RSI'] = ta.rsi(data['Close'], length=14)
     data['EMA_20'] = ta.ema(data['Close'], length=20)
     
-    last_price = float(data['Close'].iloc[-1])
+   last_price = float(data['Close'].values[-1])
     last_rsi = float(data['RSI'].iloc[-1])
     avg_vol = data['Volume'].tail(20).mean()
     curr_vol = data['Volume'].iloc[-1]
